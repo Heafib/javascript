@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript If...Else 语句</title>
+</head>
+
+<body>
+    <!-- If 语句
+只有当指定条件为 true 时，该语句才会执行代码。 -->
+    <p>如果时间早于 20:00，会获得问候 “Good Day！”。</p>
+    <button onclick="myFunction()">点击这里</button>
+    <p id="demo"></p>
+    <script>
+    function myFunction() {
+        var x = "";
+        var time = new Date().getHours();
+        if (time < 20) {
+            x = "Good Day!";
+        }
+        document.getElementById('demo').innerHTML = x;
+    }
+    </script>
+    <!-- If...else 语句
+请使用 if....else 语句在条件为 true 时执行代码，在条件为 false 时执行其他代码。
+ -->
+    <p>点击这个按钮，会获得基于时间的问候。</p>
+    <button onclick="myFunction1()">点击这里</button>
+    <p id="demo1"></p>
+    <script>
+    function myFunction1() {
+        var x = "";
+        var time = new Date().getHours();
+        if (time < 20) {
+            x = "Good Day!";
+        } else {
+            x = "Good Evening!";
+        }
+        document.getElementById('demo1').innerHTML = x;
+    }
+    </script>
+    <!-- If...else if...else 语句
+使用 if....else if...else 语句来选择多个代码块之一来执行。 -->
+	<p>点击这个按钮，会获得基于时间的问候。</p>
+	<button onclick="myFunction2()">点击这里</button>
+	<p id="demo2"></p>
+	<script>
+		function myFunction2() {
+			var x = "";
+			var time = new Date().getHours();
+			if (time < 10) {
+				x = "Good Morning!";
+			} 
+			else if(time < 20)
+			{
+				x = "Good Day!";
+			} else {
+				x = "Good Evening!"
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Switch 语句</title>
+</head>
+<body>
+	<!-- JavaScript Switch 语句
+请使用 switch 语句来选择要执行的多个代码块之一 -->
+    <p>点击下面的按钮来显示今天是星期几：</p>
+    <button onclick="myFunction3()">点击这里</button>
+    <p id="demo3"></p>
+    <script>
+    function myFunction3() {
+        var x = "";
+        var d = new Date().getDay();
+        switch (d) {
+            case 0:
+                x = "Sunday";
+                break;
+            case 1:
+                x = "Monday";
+                break;
+            case 2:
+                x = "Tuesday";
+                break;
+            case 3:
+                x = "Wednesday";
+                break;
+            case 4:
+                x = "Thursday";
+                break;
+            case 5:
+                x = "Friday";
+                break;
+            case 6:
+                x = "Saturday";
+                break;
+        }
+        document.getElementById('demo3').innerHTML = "Today is " + x;
+    }
+    </script>
+    <!-- default 关键词
+请使用 default 关键词来规定匹配不存在时做的事情： -->
+    <p>点击下面的按钮，会显示出基于今日日期的消息：</p>
+    <button onclick="myFunction4()">点击这里</button>
+    <p id="demo4"></p>
+    <script>
+    function myFunction4() {
+        var x = "";
+        var d = new Date().getDay();
+        switch (d) {
+            case 6:
+                x = "Today is Saturday";
+                break;
+            case 0:
+                x = "Today is Sunday";
+                break;
+            default:
+                x = "Looking forward to the Weekend";
+        }
+        document.getElementById('demo4').innerHTML = x;
+    }
+    </script>
+</body>
+</html>

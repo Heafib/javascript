@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript While 循环</title>
+</head>
+
+<body>
+    <!-- while 循环
+While 循环会在指定条件为真时循环执行代码块。 -->
+    <p>点击下面的按钮，只要i小于5就一直循环执行代码块。</p>
+    <button onclick="myFunction()">点击这里</button>
+    <p id="demo"></p>
+    <script>
+    function myFunction() {
+        var x = "",
+            i = 0;
+        while (i < 5) {
+            x = x + "The number is " + i + "<br />";
+            i++;
+        }
+        document.getElementById('demo').innerHTML = x;
+    }
+    </script>
+    <!-- do/while 循环
+do/while 循环是 while 循环的变体。该循环会执行一次代码块，在检查条件是否为真之前，然后如果条件为真的话，就会重复这个循环。 -->
+    <!-- 下面的例子使用 do/while 循环。该循环至少会执行一次，即使条件是 false，隐藏代码块会在条件被测试前执行： -->
+    <p>点击下面的按钮，只要i小于5就一直循环执行代码块。</p>
+    <button onclick="myFunction1()">点击这里</button>
+    <p id="demo1"></p>
+    <script>
+    function myFunction1() {
+        var x = "",
+            i = 0;
+        do {
+            x = x + "The number is " + i + "<br />";
+            i++;
+        }
+        while (i < 5)
+        document.getElementById('demo1').innerHTML = x;
+    }
+    </script>
+    <!-- 比较 for 和 while
+如果您已经阅读了前面那一章关于 for 循环的内容，您会发现 while 循环与 for 循环很像。 -->
+<!-- for 语句实例
+本例中的循环使用 for 循环来显示 cars 数组中的所有值： -->
+<script>
+	cars = ["BMW","Volvo","Saab","Ford"];
+	var i = 0;
+	for ( ; cars[i]; ) {
+		document.write(cars[i] + "<br />");
+		i++;
+	}
+</script>
+<br />
+<!-- while 语句实例
+本例中的循环使用使用 while 循环来显示 cars 数组中的所有值： -->
+<script>
+	cars = ["BMW","Volvo","Saab","Ford"];
+	var i = 0;
+	while (cars[i])
+	{
+		document.write(cars[i] + "<br />");
+		i++;
+	}
+</script>
+</body>
+
+</html>
